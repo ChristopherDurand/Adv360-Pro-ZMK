@@ -20,7 +20,7 @@
 
 #define DEFAULT 0
 #define MAC     1
-#define EMPTY   2
+#define WHY     2
 #define LSYM    3
 #define RSYM    4
 #define ESYM    5
@@ -31,11 +31,11 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     extra_sym_needs_both {
-      if-layers = <EMPTY RSYM>;
+      if-layers = <WHY RSYM>;
       then-layer = <ESYM>;
     };
     empty_implies_lsym {
-      if-layers = <EMPTY>;
+      if-layers = <WHY>;
       then-layers = <LSYM>;
     };
     rsym_gets_lsym_fallthrough {
