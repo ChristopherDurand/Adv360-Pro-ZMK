@@ -52,6 +52,13 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+    mac: mac {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <150>;
+      bindings = <&none>, <&none>, <&tog MAC>;
+    };
+    
   };
 
   macros {
@@ -77,7 +84,7 @@
  
     default_layer {
       bindings = <
-        &kp EQUAL         &kp N1            &kp N2            &kp N3            &kp N4            &kp N5     &none                                                                                                                         &mo MOD &kp N6       &kp N7      &kp N8      &kp N9     &kp N0     &kp MINUS
+        &kp EQUAL         &kp N1            &kp N2            &kp N3            &kp N4            &kp N5     &mac                                                                                                                         &mo MOD &kp N6       &kp N7      &kp N8      &kp N9     &kp N0     &kp MINUS
         &kp TAB           &kp Q             &kp W             &kp E             &kp R             &kp T      &none                                                                                                                         &none   &kp Y        &kp U       &kp I       &kp O      &kp P      &kp BSLH
         &kp ESC           &hm LSHIFT A      &hm LGUI S        &hm LALT D        &hm LCTRL F       &kp G      &none                         &kp LCTRL  &kp LALT           &kp LGUI   &kp RCTRL                                              &none   &kp H        &hm LCTRL J &hm LALT K  &hm LGUI L &kp SEMI   &kp SQT
         &kp LSHFT         &kp Z             &kp X             &kp C             &kp V             &kp B                                               &kp HOME           &kp PG_UP                                                                 &kp N        &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
@@ -104,7 +111,6 @@
         &trans            &trans            &trans            &trans            &trans                                    &kp TAB   &trans   &trans       &trans   &trans    &kp ESC                                          &trans            &trans            &trans            &trans            &trans
       >;
     };
-
     layer_left_sym {
       bindings = <
         &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
