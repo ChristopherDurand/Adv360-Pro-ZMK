@@ -1,6 +1,6 @@
 # Main script logic
 param (
-    [string]$Target = "All"
+    [string]$Target = "Left"
 )
 
 # Get the Docker command (assuming Docker Desktop is installed)
