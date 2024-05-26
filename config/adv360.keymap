@@ -64,7 +64,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "left symbol caps word";
             #binding-cells = <0>;
-            bindings = <&repeat_or_rsym 0 0>, <&caps_word>;
+            bindings = <&repeat_or_lsym 0 0>, <&caps_word>;
         };
 
         rhm: rhm {
@@ -109,6 +109,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            hold-while-undecided;
         };
     };
 
