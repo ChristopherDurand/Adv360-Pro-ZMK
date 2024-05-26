@@ -57,6 +57,6 @@ jobs:
       - name: Archive (Adv360)
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
+          name: firmware-${{matrix.side}}
           path: |
             ${{ steps.get_info.outputs.file_prefix }}-${{matrix.side}}.uf2
