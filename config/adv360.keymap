@@ -153,7 +153,7 @@
         &trans            &trans            &kp LC(N7)        &kp LC(N8)        &kp LC(N9)        &trans                                    &trans       &trans                                                &trans       &kp LC(N7)        &kp LC(N8)        &kp LC(N9)        &trans            &trans
         &trans            &trans            &trans            &trans            &trans                                    &trans   &trans   &trans       &trans   &trans    &trans                                          &trans            &trans            &trans            &trans            &trans
       >;
-    }
+    };
 
     layer_layer_mod {
       bindings = <
