@@ -133,6 +133,19 @@
 
             label = "RSYM";
         };
+
+        momod: momod {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &mo MACRO_PLACEHOLDER>;
+
+            label = "MOMOD";
+        };
     };
 
     keymap {
@@ -160,11 +173,11 @@
 
         layer_common_symbols {
             bindings = <
-&trans       &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
-&trans       &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
-&mo WINAPPS  &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &mo WINAPPS
-&trans       &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
-&trans       &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
+&trans          &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
+&trans          &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
+&mo WINAPPS     &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &mo WINAPPS
+&momod LCTRL 6  &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
+&trans          &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
             >;
         };
 
@@ -200,11 +213,11 @@
 
         layer_win_apps {
             bindings = <
-&trans  &trans  &trans           &trans           &trans           &trans  &trans                                      &trans  &trans  &trans           &trans           &trans           &trans  &trans
-&trans  &trans  &kp F13 &kp F14  &kp F15  &trans  &trans                                      &trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans  &trans                                      &trans  &trans  &trans   &trans   &trans   &trans  &trans
+&trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans                                      &trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans
 &trans  &trans  &kp F16  &kp F17  &kp F18  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp F16  &kp F17  &kp F18  &trans  &trans
 &trans  &trans  &kp F19  &kp F20  &kp F21  &trans                  &trans      &trans                  &trans  &kp F19  &kp F20  &kp F21  &trans  &trans
-&trans  &trans  &trans           &trans           &trans                   &trans  &trans  &trans      &trans  &trans  &trans          &trans           &trans           &trans           &trans  &trans
+&trans  &trans  &trans   &trans   &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans   &trans   &trans   &trans  &trans
             >;
         };
 
