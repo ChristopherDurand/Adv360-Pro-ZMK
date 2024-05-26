@@ -29,11 +29,14 @@
       if-layers = <1>;
       then-layer = <2>;
     };
+    weird_hack_2 {
+      if-layers = <3>;
+      then-layer = <2>;
+    };
   };
   behaviors {
     #include "macros.dtsi"
     #include "version.dtsi"
-
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -43,7 +46,7 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
-  };
+  };[({@#$rew}])g])}])}])}])werwerwer
 
     keymap {
         compatible = "zmk,keymap";
