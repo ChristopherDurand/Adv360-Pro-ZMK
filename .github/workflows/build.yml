@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
+    strategy: 
+      matrix:
+        side: [left, right]
+
     name: Build
     steps:
       - name: Checkout
@@ -34,11 +38,11 @@ jobs:
             zephyr/
             bootloader/
             zmk/
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
+          key: ${{ runner.os }}-${{ matrix.side }}-build-${{ env.cache-name }}-${{ hashFiles('manifest-dir/west.yml') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.os }}-${{ matrix.side }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-${{ matrix.side }}-build-
+            ${{ runner.os }}-${{ matrix.side }}-
       - name: West Init
         run: west init -l config
       - name: West Update
@@ -47,21 +51,12 @@ jobs:
         run: west zephyr-export
       - name: West Build
         run: |-
-          west build -s zmk/app -d build/left  -b adv360_left  -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config" &
-          west build -s zmk/app -d build/right -b adv360_right -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config" &
-          wait
-      # - name: Adv360 Left Kconfig file
-      #   run: grep -vE '(^#|^$)' build/left/zephyr/.config
-      # - name: West Build (right)
-      #   run: west build -s zmk/app -d build/right -b adv360_right -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      # - name: Adv360 Right Kconfig file
-      #   run: grep -vE '(^#|^$)' build/right/zephyr/.config
+          west build -s zmk/app -d build/]${{ matrix.side }}  -b adv360_${{ matrix.side }}  -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config
       - name: Rename zmk.uf2
-        run: cp build/left/zephyr/zmk.uf2 ${{ steps.get_info.outputs.file_prefix }}-left.uf2 && cp build/right/zephyr/zmk.uf2 ${{ steps.get_info.outputs.file_prefix }}-right.uf2
+        run: cp build/${{matrix.side}}/zephyr/zmk.uf2 ${{ steps.get_info.outputs.file_prefix }}-${{ matrix.side }}.uf2 
       - name: Archive (Adv360)
         uses: actions/upload-artifact@v4
         with:
           name: firmware
           path: |
-            ${{ steps.get_info.outputs.file_prefix }}-left.uf2
-            ${{ steps.get_info.outputs.file_prefix }}-right.uf2
+            ${{ steps.get_info.outputs.file_prefix }}-${{matrix.side}}.uf2
