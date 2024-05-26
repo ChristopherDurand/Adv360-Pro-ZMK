@@ -29,7 +29,7 @@ function BuildAndRun {
     )
 
     Write-Output "Running PowerShell script to generate version info"
-    powershell -ExecutionPolicy Bypass -File bin/generate_version.ps1 > $null
+    powershell -ExecutionPolicy Bypass -File bin/get_version.ps1 > $null
 
     Write-Output "Building Docker image..."
     & $DOCKER build --tag zmk --file Dockerfile .
