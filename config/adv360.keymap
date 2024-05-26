@@ -63,7 +63,7 @@
             &trans            &trans            &kp BACKSLASH     &kp GRAVE         &kp TILDE         &trans                                    &trans       &trans                                                &trans       &kp QMARK         &kp EXCL          &kp COLON         &trans            &trans
             &trans            &trans            &trans            &trans            &trans                                    &kp TAB   &trans   &trans       &trans   &trans    &kp ESC                                          &trans            &trans            &trans            &trans            &trans
           >;
-        }
+        };
 
         right_sym {
           bindings = <
@@ -73,7 +73,7 @@
             &trans            &trans            &trans            &trans            &trans            &trans                                    &trans       &trans                                                &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &trans            &trans            &trans            &trans                                    &trans   &trans   &trans       &trans   &trans    &trans                                          &trans            &trans            &trans            &trans            &trans
           >;
-        }
+        };
 
         super_sym {
           bindings = <
@@ -83,7 +83,7 @@
             &trans            &trans            &trans            &trans            &trans            &trans                                    &trans       &trans                                                &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &trans            &trans            &trans            &trans                                    &trans   &trans   &trans       &trans   &trans    &trans                                          &trans            &trans            &trans            &trans            &trans
           >;
-        }
+        };
         layer_mod {
           bindings = <
             &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
@@ -102,7 +102,7 @@
             &trans            &trans            &trans            &trans            &trans            &trans                                    &trans       &trans                                                &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &trans            &trans            &trans            &trans                                    &trans   &trans   &trans       &trans   &trans    &trans                                          &trans            &trans            &trans            &trans            &trans
           >;
-        }
+        };
 
     };
 };
