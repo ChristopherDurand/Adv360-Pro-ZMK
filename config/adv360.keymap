@@ -55,7 +55,7 @@
           >;
         };
 
-        left_sym {
+        layer_left_sym {
           bindings = <
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &kp PIPE          &kp AT            &kp POUND         &kp DLLR          &kp PRCNT  &trans                                                                          &trans            &kp CARET    &kp AMPERSAND     &kp STAR          &kp SLASH         &trans            &trans
@@ -65,7 +65,7 @@
           >;
         };
 
-        right_sym {
+        layer_right_sym {
           bindings = <
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
@@ -75,7 +75,7 @@
           >;
         };
 
-        super_sym {
+        layer_super_sym {
           bindings = <
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
@@ -84,7 +84,7 @@
             &trans            &trans            &trans            &trans            &trans                                    &trans   &trans   &trans       &trans   &trans    &trans                                          &trans            &trans            &trans            &trans            &trans
           >;
         };
-        layer_mod {
+        layer_layer_mod {
           bindings = <
             &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
             &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
@@ -94,7 +94,7 @@
           >;
         };
 
-        empty {
+        layer_empty {
           bindings = <
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
             &trans            &trans            &trans            &trans            &trans            &trans     &trans                                                                          &trans            &trans       &trans            &trans            &trans            &trans            &trans
