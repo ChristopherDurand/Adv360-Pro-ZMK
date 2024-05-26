@@ -29,11 +29,6 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        extra_sym_needs_both {
-            if-layers = <LSYM RSYM>;
-            then-layer = <ESYM>;
-        };
-
         mac_apps {
             if-layers = <MAC WINAPPS>;
             then-layer = <MACAPPS>;
@@ -149,7 +144,7 @@
 &kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &treset                                                                                      &treset          &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
 &kp ESC    &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &loader   &kp LCTRL           &kp K_PLAY_PAUSE      &kp K_VOLUME_DOWN     &kp K_VOLUME_UP    &loader          &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &kp SQT
 &kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                 &kp HOME              &kp C_BRIGHTNESS_INC                                      &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
-&none      &kp GRAVE      &kp CAPS     &kp LEFT     &kp RIGHT             &kp BSPC  &kp_lsym_caps_word  &kp END               &kp C_BRIGHTNESS_DEC  &kp_or_rsym 0 TAB  &mt ENTER SPACE          &kp UP        &kp DOWN     &kp LBKT         &kp RBKT               &none
+&none      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC  &kp_lsym_caps_word  &kp END               &kp C_BRIGHTNESS_DEC  &kp_or_rsym 0 TAB  &mt ENTER SPACE          &kp UP        &kp DOWN     &kp LBKT         &kp RBKT               &none
             >;
         };
 
@@ -179,7 +174,7 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans     &trans  &trans    &trans
 &trans  &kp LT  &kp LBRC  &kp LBKT  &kp LPAR  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp MINUS  &trans  &kp APOS  &trans
 &trans  &trans  &trans    &trans    &trans    &trans                  &trans      &trans                  &trans  &trans  &trans     &trans  &trans    &trans
-&trans  &trans  &trans    &trans    &trans            &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans     &trans  &trans    &trans
+&trans  &trans  &trans    &trans    &trans            &trans  &trans  &trans      &trans  &mo 5   &trans          &trans  &trans     &trans  &trans    &trans
             >;
         };
 
@@ -189,7 +184,7 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans    &trans  &trans   &trans
 &trans  &kp GT  &kp RBRC  &kp RBKT  &kp RPAR  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp PLUS  &trans  &kp DQT  &trans
 &trans  &trans  &trans    &trans    &trans    &trans                  &trans      &trans                  &trans  &trans  &trans    &trans  &trans   &trans
-&trans  &trans  &trans    &trans    &trans            &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans    &trans  &trans   &trans
+&trans  &trans  &trans    &trans    &trans            &trans  &mo 5   &trans      &trans  &trans  &trans          &trans  &trans    &trans  &trans   &trans
             >;
         };
 
@@ -205,11 +200,11 @@
 
         layer_win_apps {
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans  &trans                                      &trans  &trans  &trans   &trans   &trans   &trans  &trans
-&trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans                                      &trans  &trans  &kp F13  &kp F14  &kp F15  &trans  &trans
-&trans  &trans  &kp F16  &kp F17  &kp F18  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp F16  &kp F17  &kp F18  &trans  &trans
-&trans  &trans  &kp F19  &kp F20  &kp F21  &trans                  &trans      &trans                  &trans  &kp F19  &kp F20  &kp F21  &trans  &trans
-&trans  &trans  &trans   &trans   &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans   &trans   &trans   &trans  &trans
+&trans  &trans  &trans           &trans           &trans           &trans  &trans                                      &trans  &trans  &trans           &trans           &trans           &trans  &trans
+&trans  &trans  &mt LC(F13) F13  &mt LC(F14) F14  &mt LC(F15) F15  &trans  &trans                                      &trans  &trans  &mt LC(F13) F13  &mt LC(F14) F14  &mt LC(F15) F15  &trans  &trans
+&trans  &trans  &mt LC(F16) F16  &mt LC(F17) F17  &mt LC(F18) F18  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mt LC(F16) F16  &mt LC(F17) F17  &mt LC(F18) F18  &trans  &trans
+&trans  &trans  &mt LC(F19) F19  &mt LC(F20) F20  &mt LC(F21) F21  &trans                  &trans      &trans                  &trans  &mt LC(F19) F19  &mt LC(F20) F20  &mt LC(F21) F21  &trans  &trans
+&trans  &trans  &trans           &trans           &trans                   &trans  &trans  &trans      &trans  &trans  &trans          &trans           &trans           &trans           &trans  &trans
             >;
         };
 
