@@ -36,14 +36,12 @@
     };
     empty_implies_lsym {
       if-layers = <WHY>;
-      then-layers = <LSYM>;
+      then-layer = <LSYM>;
     };
     rsym_gets_lsym_fallthrough {
       if-layers = <RSYM>;
-      then-layers = <LSYM>;
+      then-layer = <LSYM>;
     };
-    
-
   };
   behaviors {
     #include "macros.dtsi"
