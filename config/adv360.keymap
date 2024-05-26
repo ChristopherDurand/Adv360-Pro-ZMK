@@ -29,11 +29,6 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        extra_sym_needs_both {
-            if-layers = <LSYM RSYM>;
-            then-layer = <ESYM>;
-        };
-
         mac_apps {
             if-layers = <MAC WINAPPS>;
             then-layer = <MACAPPS>;
@@ -179,7 +174,7 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans     &trans  &trans    &trans
 &trans  &kp LT  &kp LBRC  &kp LBKT  &kp LPAR  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp MINUS  &trans  &kp APOS  &trans
 &trans  &trans  &trans    &trans    &trans    &trans                  &trans      &trans                  &trans  &trans  &trans     &trans  &trans    &trans
-&trans  &trans  &trans    &trans    &trans            &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans     &trans  &trans    &trans
+&trans  &trans  &trans    &trans    &trans            &trans  &trans  &trans      &trans  &mo 5   &trans          &trans  &trans     &trans  &trans    &trans
             >;
         };
 
@@ -189,7 +184,7 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans    &trans  &trans   &trans
 &trans  &kp GT  &kp RBRC  &kp RBKT  &kp RPAR  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp PLUS  &trans  &kp DQT  &trans
 &trans  &trans  &trans    &trans    &trans    &trans                  &trans      &trans                  &trans  &trans  &trans    &trans  &trans   &trans
-&trans  &trans  &trans    &trans    &trans            &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans    &trans  &trans   &trans
+&trans  &trans  &trans    &trans    &trans            &trans  &mo 5   &trans      &trans  &trans  &trans          &trans  &trans    &trans  &trans   &trans
             >;
         };
 
