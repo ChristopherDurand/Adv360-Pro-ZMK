@@ -148,6 +148,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        supersym {
+            bindings = <&mo 5>;
+            key-positions = <66 69>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
