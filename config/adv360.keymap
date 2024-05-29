@@ -187,11 +187,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &mac                                                                                                                 &mo MOD               &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &kp MINUS
-&kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &treset                                                                                                              &treset               &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
-&kp ESC    &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &loader   &kp LS(LA(LC(LG(LCTRL))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &loader               &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &kp SQT
-&kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                        &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
-&mo 6      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC  &kp_or_lsym 0 ESCAPE       &meh                                   &kp C_BRIGHTNESS_DEC  &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &kp LBKT         &kp RBKT               &mo 6
+&kp EQUAL  &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &mac                                                                                                                        &mo MOD               &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &kp MINUS
+&kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &treset                                                                                                                     &treset               &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
+&kp ESC    &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &loader   &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &loader               &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &kp SQT
+&kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                               &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
+&mo 6      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC  &kp_or_lsym 0 ESCAPE              &meh                                   &kp C_BRIGHTNESS_DEC  &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &kp LBKT         &kp RBKT               &mo 6
             >;
         };
 
