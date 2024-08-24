@@ -38,6 +38,11 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
+
+        super_sym {
+            if-layers = <5 6>;
+            then-layer = <7>;
+        };
     };
 
     behaviors {
@@ -191,27 +196,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        supersym {
-            bindings = <&mo 7>;
-            key-positions = <66 69>;
-            timeout-ms = <200>;
-        };
-
-        l_apps {
-            bindings = <&mo 8>;
-            key-positions = <66 28>;
-            timeout-ms = <200>;
-        };
-
-        r_apps {
-            bindings = <&mo 8>;
-            key-positions = <69 45>;
-            timeout-ms = <200>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -260,7 +245,7 @@
             bindings = <
 &trans          &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
 &trans          &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
-&trans          &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &trans
+&mo 8           &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &mo 8
 &momod LCTRL 8  &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
 &trans          &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
             >;
