@@ -8,12 +8,15 @@ I use [nickcoutsos/keymap-editor](https://nickcoutsos.github.io/keymap-editor/) 
 
 ### Build firmware
 
-1. Push a commit to trigger the build.
-2. Download the artifact.
+1. Push a commit.
+2. Dispatch the [Build](https://github.com/ChristopherDurand/Adv360-Pro-ZMK/actions/workflows/build.yml) action.
+3. Download the artifact.
 
 ## Flashing firmware
 
-Follow the programming instruction on page 8 of the [Quick Start Guide](https://kinesis-ergo.com/wp-content/uploads/Advantage360-Professional-QSG-v8-25-22.pdf) to flash the firmware.
+Put either module in bootloader mode by pressing and holding the Top Right button on the right module to enter the programming layer, and then press the lowest button on the inner index column to enter bootloader mode.
+
+Drag and drop the file into the drive that shows up to flash the firmware. In most cases you only need to flash the left side.
 
 ### Overview
 
