@@ -198,6 +198,16 @@
             bindings = <&mo 7>;
             key-positions = <66 69>;
         };
+
+        l_apps {
+            bindings = <&mo 8>;
+            key-positions = <66 28>;
+        };
+
+        r_apps {
+            bindings = <&mo 8>;
+            key-positions = <69 45>;
+        };
     };
 
     keymap {
@@ -205,11 +215,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &none                                                                                                                       &mo 10                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &kp MINUS
-&kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &none                                                                                                                       &none                 &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
-&kp ESC    &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &none     &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &kp SQT
-&kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                               &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
-&mo 8      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC  &kp_or_lsym 0 ESCAPE              &meh                                   &smeh                 &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &none            &none                  &mo 8
+&kp EQUAL  &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 10                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &kp MINUS
+&kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &none                 &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
+&kp ESC    &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &none                              &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &kp SQT
+&kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                                                        &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
+&mo 8      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh                 &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &none            &none                  &mo 8
             >;
         };
 
@@ -247,7 +257,7 @@
             bindings = <
 &trans          &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
 &trans          &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
-&mo 8           &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &mo 8
+&trans          &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &trans
 &momod LCTRL 8  &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
 &trans          &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
             >;
