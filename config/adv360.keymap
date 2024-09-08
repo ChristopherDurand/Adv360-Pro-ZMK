@@ -205,7 +205,7 @@
             bindings = <
 &kp EQUAL  &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 10                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &kp MINUS
 &kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &none                 &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
-&kp ESC    &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &none                              &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &kp SQT
+&mo 8      &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &none                              &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 8
 &kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                                                        &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
 &mo 8      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh                 &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &none            &none                  &mo 8
             >;
@@ -245,7 +245,7 @@
             bindings = <
 &trans          &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
 &trans          &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
-&mo 8           &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &mo 8
+&trans          &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &trans
 &momod LCTRL 8  &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
 &trans          &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
             >;
@@ -283,11 +283,11 @@
 
         layer_ubuntu_apps {
             bindings = <
-&trans  &trans  &trans            &trans            &trans            &trans  &trans                                      &trans  &trans  &trans            &trans            &trans            &trans  &trans
-&trans  &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans                                      &trans  &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &trans  &trans
-&trans  &trans  &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LG(NUMBER_4)  &kp LG(N5)        &kp LG(NUMBER_6)  &trans  &trans
-&trans  &trans  &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &trans                  &trans      &trans                  &trans  &kp LG(N7)        &kp LG(N8)        &kp LG(N9)        &trans  &trans
-&trans  &trans  &trans            &trans            &trans                    &trans  &trans  &trans      &trans  &trans  &trans          &trans            &trans            &trans            &trans  &trans
+&trans  &trans  &trans                    &trans                    &trans                    &trans  &trans                                      &trans  &trans  &trans                        &trans                        &trans                        &trans  &trans
+&trans  &trans  &kp LG(LC(LA(NUMBER_1)))  &kp LG(LC(LA(NUMBER_2)))  &kp LG(LC(LA(NUMBER_3)))  &trans  &trans                                      &trans  &trans  &kp LG(LC(LA(LS(NUMBER_1))))  &kp LG(LC(LA(LS(NUMBER_2))))  &kp LG(LC(LA(LS(NUMBER_3))))  &trans  &trans
+&trans  &trans  &kp LG(LC(LA(NUMBER_4)))  &kp LG(LC(LA(N5)))        &kp LG(LC(LA(NUMBER_6)))  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LG(LS(LA(LC(NUMBER_4))))  &kp LG(LC(LA(LS(N5))))        &kp LG(LC(LS(LA(NUMBER_6))))  &trans  &trans
+&trans  &trans  &kp LG(LC(LA(N7)))        &kp LG(LC(LA(N8)))        &kp LG(LC(LA(N9)))        &trans                  &trans      &trans                  &trans  &kp LG(LC(LA(LS(N7))))        &kp LG(LC(LA(LS(N8))))        &kp LG(LC(LA(LS(N9))))        &trans  &trans
+&trans  &trans  &trans                    &trans                    &trans                            &trans  &trans  &trans      &trans  &trans  &trans          &trans                        &trans                        &trans                        &trans  &trans
             >;
         };
 
