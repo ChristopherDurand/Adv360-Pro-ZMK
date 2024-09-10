@@ -203,11 +203,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 10                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &kp MINUS
-&kp TAB    &kp Q          &kp W        &kp E        &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &none                 &kp Y   &kp U         &kp I        &kp O            &kp P                  &kp BSLH
+&none      &kp N1         &kp N2       &kp N3       &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 10                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
+&none      &kp Q          &kp W        &kp E        &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &none                 &kp Y   &kp U         &kp I        &kp O            &kp P                  &none
 &mo 8      &lhm LSHIFT A  &lhm LGUI S  &lhm LALT D  &lhm LCTRL F  &kp G   &none                              &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 8
 &kp LSHFT  &kp Z          &kp X        &kp C        &kp V         &kp B                                                                        &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
-&mo 8      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh                 &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &none            &none                  &mo 8
+&none      &kp GRAVE      &none        &kp LEFT     &kp RIGHT             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh                 &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &kp COLON        &kp SINGLE_QUOTE       &none
             >;
         };
 
