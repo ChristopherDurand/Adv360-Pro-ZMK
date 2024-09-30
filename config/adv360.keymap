@@ -30,18 +30,18 @@
         compatible = "zmk,conditional-layers";
 
         mac_apps {
-            if-layers = <2 8>;
-            then-layer = <9>;
+            if-layers = <4 10>;
+            then-layer = <11>;
         };
 
         colemak-mac {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <1 4>;
+            then-layer = <5>;
         };
 
         super_sym {
-            if-layers = <5 6>;
-            then-layer = <7>;
+            if-layers = <7 8>;
+            then-layer = <9>;
         };
     };
 
@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&none>, <&tog 2>;
+            bindings = <&none>, <&none>, <&tog 4>;
         };
 
         kp_lsym_caps_word: lscw {
@@ -137,10 +137,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4 &mo 5>,
+                <&mo 6 &mo 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4 &mo 5>;
+                <&mo 6 &mo 7>;
         };
 
         rsym: rsym {
@@ -148,10 +148,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4 &mo 6>,
+                <&mo 6 &mo 8>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4 &mo 6>;
+                <&mo 6 &mo 8>;
 
             label = "RSYM";
         };
@@ -203,9 +203,9 @@
 
         default_layer {
             bindings = <
-&none      &kp N1         &kp N2         &kp N3       &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 10                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
+&none      &kp N1         &kp N2         &kp N3       &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 12                &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
 &none      &kp Q          &kp W          &kp E        &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &none                 &kp Y   &kp U         &kp I        &kp O            &kp P                  &none
-&mo 8      &lhm LSHIFT A  &lhm LGUI S    &lhm LALT D  &lhm LCTRL F  &kp G   &none                              &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 8
+&mo 10     &lhm LSHIFT A  &lhm LGUI S    &lhm LALT D  &lhm LCTRL F  &kp G   &none                              &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP    &none                 &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 10
 &kp LSHFT  &kp Z          &kp X          &kp C        &kp V         &kp B                                                                        &kp HOME                               &kp C_BRIGHTNESS_INC                                           &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
 &none      &kp GRAVE      &kp BACKSLASH  &kp LEFT     &kp RIGHT             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh                 &kp_or_rsym 0 TAB  &spenter ENTER SPACE          &kp UP        &kp DOWN     &kp COLON        &kp SINGLE_QUOTE       &none
             >;
@@ -218,6 +218,26 @@
 &trans  &lhm LEFT_SHIFT A  &lhm LEFT_GUI R  &lhm LEFT_ALT S  &lhm LCTRL T  &kp G   &trans  &trans  &trans      &trans  &trans  &trans  &kp M   &rhm LCTRL N  &rhm LEFT_ALT E  &rhm LEFT_GUI I  &rhm LEFT_SHIFT O  &trans
 &trans  &kp Z              &kp X            &kp C            &kp D         &kp V                   &trans      &trans                  &kp K   &kp H         &kp COMMA        &kp DOT          &kp FSLH           &trans
 &trans  &trans             &trans           &trans           &trans                &trans  &trans  &trans      &trans  &trans  &trans          &trans        &trans           &trans           &trans             &trans
+            >;
+        };
+
+        ms {
+            bindings = <
+&trans  &trans  &trans    &trans    &trans     &trans  &trans                                        &trans     &trans  &trans  &trans  &trans  &trans  &tog 2
+&trans  &kp Q   &kp W     &kp UP    &kp R      &kp T   &trans                                        &trans     &kp Q   &kp W   &kp E   &kp R   &kp T   &trans
+&mo 10  &kp A   &kp LEFT  &kp DOWN  &kp RIGHT  &kp G   &trans  &trans   &trans      &trans  &trans   &trans     &kp A   &kp S   &kp D   &kp F   &kp G   &mo 10
+&trans  &trans  &trans    &trans    &trans     &trans                   &trans      &trans                      &kp Z   &kp X   &kp C   &kp V   &kp B   &trans
+&trans  &trans  &trans    &trans    &trans             &mo 3   &kp ESC  &trans      &trans  &kp TAB  &kp SPACE          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_12 {
+            bindings = <
+&trans  &trans  &trans   &trans   &trans   &trans     &trans                                      &trans     &trans  &trans  &trans     &trans   &trans    &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp LBKT   &trans                                      &kp EQUAL  &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp RBKT   &trans  &trans  &trans      &trans  &trans  &trans     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp MINUS                  &trans      &trans                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+&trans  &trans  &trans   &trans   &trans              &trans  &trans  &trans      &trans  &trans  &trans             &trans  &trans     &trans   &trans    &trans
             >;
         };
 
@@ -243,11 +263,11 @@
 
         layer_common_symbols {
             bindings = <
-&trans          &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
-&trans          &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
-&trans          &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &trans
-&momod LCTRL 8  &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
-&trans          &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
+&trans           &trans    &trans         &trans     &trans     &trans     &trans                                       &trans   &trans     &trans         &trans    &trans     &trans  &trans
+&trans           &kp PIPE  &kp AT         &kp POUND  &kp DLLR   &kp PRCNT  &trans                                       &trans   &kp CARET  &kp AMPERSAND  &kp STAR  &kp SLASH  &trans  &trans
+&trans           &trans    &trans         &trans     &trans     &trans     &trans   &trans  &trans      &trans  &trans  &trans   &trans     &kp EQUAL      &trans    &kp UNDER  &trans  &trans
+&momod LCTRL 10  &trans    &kp BACKSLASH  &kp GRAVE  &kp TILDE  &trans                      &trans      &trans                   &trans     &kp QMARK      &kp EXCL  &kp COLON  &trans  &trans
+&trans           &trans    &trans         &trans     &trans                &kp TAB  &trans  &trans      &trans  &trans  &kp ESC             &trans         &trans    &trans     &trans  &trans
             >;
         };
 
@@ -303,31 +323,11 @@
 
         layer_layer_mod {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &tog 2                                                   &trans           &trans  &trans      &trans      &trans  &trans  &tog 11
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &tog 4                                                   &trans           &trans  &trans      &trans      &trans  &trans  &tog 2
 &tog 1  &trans        &trans        &trans        &trans        &trans        &bootloader                                              &bootloader      &trans  &trans      &trans      &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &sys_reset   &trans  &trans      &bt BT_CLR  &trans      &sys_reset       &trans  &trans      &trans      &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                             &trans      &trans                                   &trans  &trans      &trans      &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans                      &trans       &trans  &trans      &trans      &bl BL_TOG  &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC  &trans  &trans  &trans
-            >;
-        };
-
-        ms {
-            bindings = <
-&trans  &trans  &trans    &trans    &trans     &trans  &trans                                        &trans     &trans  &trans  &trans  &trans  &trans  &tog 11
-&trans  &kp Q   &kp W     &kp UP    &kp R      &kp T   &trans                                        &trans     &kp Q   &kp W   &kp E   &kp R   &kp T   &trans
-&mo 8   &kp A   &kp LEFT  &kp DOWN  &kp RIGHT  &kp G   &trans  &trans   &trans      &trans  &trans   &trans     &kp A   &kp S   &kp D   &kp F   &kp G   &mo 8
-&trans  &trans  &trans    &trans    &trans     &trans                   &trans      &trans                      &kp Z   &kp X   &kp C   &kp V   &kp B   &trans
-&trans  &trans  &trans    &trans    &trans             &mo 12  &kp ESC  &trans      &trans  &kp TAB  &kp SPACE          &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_12 {
-            bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans     &trans                                      &trans     &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp LBKT   &trans                                      &kp EQUAL  &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp RBKT   &trans  &trans  &trans      &trans  &trans  &trans     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp MINUS                  &trans      &trans                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-&trans  &trans  &trans   &trans   &trans              &trans  &trans  &trans      &trans  &trans  &trans             &trans  &trans     &trans   &trans    &trans
             >;
         };
     };
