@@ -223,11 +223,11 @@
 
         ms {
             bindings = <
-&trans  &trans  &trans    &trans    &trans     &trans  &trans                                          &trans     &trans  &trans  &trans  &trans  &trans  &tog 2
-&trans  &kp Q   &kp W     &kp UP    &kp R      &kp T   &trans                                          &trans     &kp Q   &kp W   &kp E   &kp R   &kp T   &trans
-&mo 10  &kp A   &kp LEFT  &kp DOWN  &kp RIGHT  &kp G   &trans  &kp ENTER  &trans      &trans  &trans   &trans     &kp A   &kp S   &kp D   &kp F   &kp G   &mo 10
-&trans  &trans  &trans    &trans    &trans     &trans                     &trans      &trans                      &kp Z   &kp X   &kp C   &kp V   &kp B   &trans
-&trans  &trans  &trans    &trans    &trans             &mo 3   &kp ESC    &trans      &trans  &kp TAB  &kp SPACE          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans     &trans     &trans    &trans                                                &trans     &trans  &trans  &trans  &trans  &trans  &tog 2
+&trans  &kp Y   &kp U     &kp UP     &kp O      &kp P     &trans                                                &trans     &kp Q   &kp W   &kp E   &kp R   &kp T   &trans
+&mo 10  &kp H   &kp LEFT  &kp DOWN   &kp RIGHT  &kp SEMI  &trans  &kp ENTER  &trans         &kp LGUI   &trans   &trans     &kp A   &kp S   &kp D   &kp F   &kp G   &mo 10
+&trans  &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH                     &trans         &kp LALT                       &kp Z   &kp X   &kp C   &kp V   &kp B   &trans
+&trans  &trans  &trans    &trans     &trans               &mo 3   &kp ESC    &kp ENTER      &kp LCTRL  &kp TAB  &kp SPACE          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
