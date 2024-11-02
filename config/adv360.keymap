@@ -313,11 +313,11 @@
 
         UBUNTU_APPS_2 {
             bindings = <
-&trans  &trans              &trans               &trans               &trans               &trans  &trans                                      &trans  &trans                  &trans   &trans   &trans   &trans  &trans
+&trans  &trans              &trans               &trans               &trans               &trans  &none                                       &trans  &trans                  &trans                   &trans                   &trans                   &trans  &trans
 &trans  &kp LA(LC(LG(F1)))  &kp LC(LA(LG(F2)))   &kp LA(LC(LG(F3)))   &kp LA(LC(LG(F4)))   &trans  &trans                                      &trans  &kp LS(LA(LC(LG(F1))))  &kp LS(LA(LC(LG(F2))))   &kp LS(LA(LC(LG(F3))))   &kp LS(LA(LC(LG(F4))))   &trans  &trans
 &trans  &kp LC(LA(LG(F5)))  &kp LC(LA(LG(F6)))   &kp LC(LA(LG(F7)))   &kp LC(LA(LG(F8)))   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LA(LC(LG(F5))))  &kp LS(LA(LC(LG(F6))))   &kp LS(LA(LC(LG(F7))))   &kp LS(LA(LC(LG(F8))))   &trans  &trans
 &trans  &kp LC(LA(LG(F9)))  &kp LC(LA(LG(F10)))  &kp LC(LA(LG(F11)))  &kp LC(LA(LG(F12)))  &trans                  &trans      &trans                  &kp LS(LA(LC(LG(F9))))  &kp LS(LA(LC(LG(F10))))  &kp LS(LA(LC(LG(F11))))  &kp LS(LA(LC(LG(F12))))  &trans  &trans
-&trans  &trans              &trans               &trans               &trans                          &trans  &trans  &trans      &trans  &trans  &trans                       &trans   &trans   &trans   &trans  &trans
+&trans  &trans              &trans               &trans               &trans                       &trans  &trans  &trans      &trans  &trans  &trans                          &trans                   &trans                   &trans                   &trans  &trans
             >;
         };
 
