@@ -31,7 +31,7 @@
 
         mac_apps {
             if-layers = <4 10>;
-            then-layer = <11>;
+            then-layer = <12>;
         };
 
         colemak-mac {
@@ -203,11 +203,11 @@
 
         default_layer {
             bindings = <
-&none      &kp N1         &kp N2         &kp N3         &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 12      &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
-&kp TAB    &kp Q          &kp W          &kp E          &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &caps_word  &kp Y   &kp U         &kp I        &kp O            &kp P                  &none
+&none      &kp N1         &kp N2         &kp N3         &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 13      &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
+&mo 11     &kp Q          &kp W          &kp E          &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &caps_word  &kp Y   &kp U         &kp I        &kp O            &kp P                  &mo 11
 &mo 10     &lhm LSHIFT A  &lhm LGUI S    &lhm LALT D    &lhm LCTRL F  &kp G   &kp DELETE                         &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp LC(A)   &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 10
 &kp LSHFT  &kp Z          &kp X          &kp C          &kp V         &kp B                                                                        &key_repeat                            &key_repeat                                          &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
-&mo 13     &kp GRAVE      &kp BACKSLASH  &kp LS(UNDER)  &kp EQUAL             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh              &kp_or_rsym 0 RETURN  &kp SPACE           &kp LS(PLUS)  &kp MINUS    &kp COLON        &kp SINGLE_QUOTE       &mo 13
+&mo 14     &kp GRAVE      &kp BACKSLASH  &kp LS(UNDER)  &kp EQUAL             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh              &kp_or_rsym 0 RETURN  &kp SPACE           &kp LS(PLUS)  &kp MINUS    &kp COLON        &kp SINGLE_QUOTE       &mo 14
             >;
         };
 
@@ -244,7 +244,7 @@
         layer_mac_mods {
             bindings = <
 &trans  &trans  &trans        &trans  &trans       &trans  &trans                                      &trans     &trans  &trans           &trans  &trans        &trans  &trans
-&trans  &trans  &trans        &trans  &trans       &trans  &trans                                      &trans     &trans  &trans           &trans  &trans        &trans  &trans
+&none   &trans  &trans        &trans  &trans       &trans  &trans                                      &trans     &trans  &trans           &trans  &trans        &trans  &none
 &trans  &trans  &lhm LCTRL S  &trans  &lhm LGUI F  &trans  &trans  &trans  &trans      &trans  &trans  &kp LC(A)  &trans  &rhm LEFT_GUI J  &trans  &rhm LCTRL L  &trans  &trans
 &trans  &trans  &trans        &trans  &trans       &trans                  &trans      &trans                     &trans  &trans           &trans  &trans        &trans  &trans
 &trans  &trans  &trans        &trans  &trans               &trans  &trans  &trans      &trans  &trans  &trans             &trans           &trans  &trans        &trans  &trans
@@ -308,6 +308,16 @@
 &trans  &kp LA(LC(LG(F14)))  &kp LG(LC(LA(NUMBER_4)))  &kp LG(LC(LA(N5)))        &kp LG(LC(LA(NUMBER_6)))  &kp LA(LC(LG(F17)))  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LC(LA(LG(F14))))  &kp LG(LS(LA(LC(NUMBER_4))))  &kp LG(LC(LA(LS(N5))))        &kp LG(LC(LS(LA(NUMBER_6))))  &kp LG(LC(LA(LS(F17))))  &trans
 &trans  &kp LA(LC(LG(F15)))  &kp LG(LC(LA(N7)))        &kp LG(LC(LA(N8)))        &kp LG(LC(LA(N9)))        &kp LG(LC(LA(F18)))                  &trans      &trans                  &kp LG(LC(LA(LS(F15))))  &kp LG(LC(LA(LS(N7))))        &kp LG(LC(LA(LS(N8))))        &kp LG(LC(LA(LS(N9))))        &kp LG(LC(LA(LS(F18))))  &trans
 &trans  &trans               &trans                    &trans                    &trans                                         &trans  &trans  &trans      &trans  &trans  &trans                           &trans                        &trans                        &trans                        &trans                   &trans
+            >;
+        };
+
+        UBUNTU_APPS_2 {
+            bindings = <
+&trans  &trans              &trans              &trans              &trans                  &trans  &trans                                      &trans  &trans                  &trans   &trans   &trans   &trans  &trans
+&trans  &kp LA(LC(LG(F1)))  &kp LC(LA(LG(F2)))  &kp LA(LC(LG(F3)))  &kp LS(LA(LC(LG(F4))))  &trans  &trans                                      &trans  &kp LS(LA(LC(LG(F1))))  &kp F2   &kp F3   &kp F4   &trans  &trans
+&trans  &kp F5              &kp F6              &kp F7              &kp F8                  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp F5                  &kp F6   &kp F7   &kp F8   &trans  &trans
+&trans  &kp F9              &kp F10             &kp F11             &kp F12                 &trans                  &trans      &trans                  &kp F9                  &kp F10  &kp F11  &kp F12  &trans  &trans
+&trans  &trans              &trans              &trans              &trans                          &trans  &trans  &trans      &trans  &trans  &trans                          &trans   &trans   &trans   &trans  &trans
             >;
         };
 
