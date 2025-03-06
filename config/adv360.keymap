@@ -51,12 +51,12 @@
             label = "LHM";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75>;
             require-prior-idle-ms = <0>;
+            quick-tap-ms = <175>;
         };
 
         mac: mac {
@@ -78,12 +78,13 @@
             label = "RHM";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
+            quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <0 1 2 3 4 5 6 16 17 18 19 20 14 15 16 17 18 19 20 28 29 30 31 32 33 34 46 47 48 49 50 51 60 61 62 63 64>;
             require-prior-idle-ms = <0>;
+            quick-tap-ms = <175>;
         };
 
         loader: loader {
@@ -128,6 +129,27 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
+        };
+
+        kp_or_meh: kp_or_meh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_OR_MEH";
+            bindings = <&meh>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+        };
+
+        kp_or_smeh: kp_or_smeh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_OR_SMEH";
+            bindings = <&smeh>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
         };
     };
 
@@ -210,11 +232,11 @@
 
         default_layer {
             bindings = <
-&none      &kp N1         &kp N2         &kp N3         &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                    &mo 13      &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
-&mo 11     &kp Q          &kp W          &kp E          &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                     &caps_word  &kp Y   &kp U         &kp I        &kp O            &kp P                  &mo 11
-&mo 10     &lhm LSHIFT A  &lhm LGUI S    &lhm LALT D    &lhm LCTRL F  &kp G   &kp DELETE                         &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp LC(A)   &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 10
-&kp LSHFT  &kp Z          &kp X          &kp C          &kp V         &kp B                                                                        &key_repeat                            &key_repeat                                          &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
-&mo 14     &kp GRAVE      &kp BACKSLASH  &kp LS(UNDER)  &kp EQUAL             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &meh                                   &smeh              &kp_or_rsym 0 RETURN  &kp SPACE           &kp LS(PLUS)  &kp MINUS    &kp COLON        &kp SINGLE_QUOTE       &mo 14
+&none      &kp N1         &kp N2         &kp N3         &kp N4        &kp N5  &kp LS(LA(LC(LG(RIGHT_BRACKET))))                                                                                                                       &mo 13      &kp N6  &kp N7        &kp N8       &kp N9           &kp N0                 &none
+&mo 11     &kp Q          &kp W          &kp E          &kp R         &kp T   &kp LS(LA(LC(LG(LEFT_BRACKET))))                                                                                                                        &caps_word  &kp Y   &kp U         &kp I        &kp O            &kp P                  &mo 11
+&mo 10     &lhm LSHIFT A  &lhm LGUI S    &lhm LALT D    &lhm LCTRL F  &kp G   &kp DELETE                         &kp LS(LA(LC(LG(LEFT_BRACKET))))  &kp LS(LA(LC(LG(RIGHT_BRACKET))))      &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp LC(A)   &kp H   &rhm LCTRL J  &rhm LALT K  &rhm LEFT_GUI L  &rhm RIGHT_SHIFT SEMI  &mo 10
+&kp LSHFT  &kp Z          &kp X          &kp C          &kp V         &kp B                                                                        &key_repeat                            &key_repeat                                             &kp N   &kp M         &kp COMMA    &kp DOT          &kp FSLH               &kp RSHFT
+&mo 14     &kp GRAVE      &kp BACKSLASH  &kp LS(UNDER)  &kp EQUAL             &kp BSPC                           &kp_or_lsym 0 ESCAPE              &kp_or_meh 0 TAB                       &kp_or_smeh 0 DELETE  &kp_or_rsym 0 RETURN  &kp SPACE           &kp LS(PLUS)  &kp MINUS    &kp COLON        &kp SINGLE_QUOTE       &mo 14
             >;
         };
 
