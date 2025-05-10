@@ -377,23 +377,23 @@
             >;
         };
 
-        layer_ubuntu_apps {
+        layer_windows_apps {
             bindings = <
-&trans  &trans               &trans                    &trans                    &trans                    &trans               &trans                                      &trans  &trans                   &trans                        &trans                        &trans                        &trans                   &trans
-&trans  &kp LA(LC(LG(F13)))  &kp LG(LC(LA(NUMBER_1)))  &kp LG(LC(LA(NUMBER_2)))  &kp LG(LC(LA(NUMBER_3)))  &kp LA(LC(LG(F16)))  &trans                                      &trans  &kp LS(LA(LC(LG(F13))))  &kp LG(LC(LA(LS(NUMBER_1))))  &kp LG(LC(LA(LS(NUMBER_2))))  &kp LG(LC(LA(LS(NUMBER_3))))  &kp LG(LC(LS(LA(F16))))  &trans
-&trans  &kp LA(LC(LG(F14)))  &kp LG(LC(LA(NUMBER_4)))  &kp LG(LC(LA(N5)))        &kp LG(LC(LA(NUMBER_6)))  &kp LA(LC(LG(F17)))  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LC(LA(LG(F14))))  &kp LG(LS(LA(LC(NUMBER_4))))  &kp LG(LC(LA(LS(N5))))        &kp LG(LC(LS(LA(NUMBER_6))))  &kp LG(LC(LA(LS(F17))))  &trans
-&trans  &kp LA(LC(LG(F15)))  &kp LG(LC(LA(N7)))        &kp LG(LC(LA(N8)))        &kp LG(LC(LA(N9)))        &kp LG(LC(LA(F18)))                  &trans      &trans                  &kp LG(LC(LA(LS(F15))))  &kp LG(LC(LA(LS(N7))))        &kp LG(LC(LA(LS(N8))))        &kp LG(LC(LA(LS(N9))))        &kp LG(LC(LA(LS(F18))))  &trans
-&trans  &trans               &trans                    &trans                    &trans                                         &trans  &trans  &trans      &trans  &trans  &trans                           &trans                        &trans                        &trans                        &trans                   &trans
+&trans  &trans           &trans                &trans                &trans                &trans           &trans                                      &trans  &trans               &trans                    &trans                    &trans                    &trans               &trans
+&trans  &kp LA(LC(F13))  &kp LC(LA(NUMBER_1))  &kp LC(LA(NUMBER_2))  &kp LC(LA(NUMBER_3))  &kp LA(LC(F16))  &trans                                      &trans  &kp LS(LA(LC(F13)))  &kp LC(LA(LS(NUMBER_1)))  &kp LC(LA(LS(NUMBER_2)))  &kp LC(LA(LS(NUMBER_3)))  &kp LC(LS(LA(F16)))  &trans
+&trans  &kp LA(LC(F14))  &kp LC(LA(NUMBER_4))  &kp LC(LA(N5))        &kp LC(LA(NUMBER_6))  &kp LA(LC(F17))  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LC(LA(F14)))  &kp LS(LA(LC(NUMBER_4)))  &kp LC(LA(LS(N5)))        &kp LC(LS(LA(NUMBER_6)))  &kp LC(LA(LS(F17)))  &trans
+&trans  &kp LA(LC(F15))  &kp LC(LA(N7))        &kp LC(LA(N8))        &kp LC(LA(N9))        &kp LC(LA(F18))                  &trans      &trans                  &kp LC(LA(LS(F15)))  &kp LC(LA(LS(N7)))        &kp LC(LA(LS(N8)))        &kp LC(LA(LS(N9)))        &kp LC(LA(LS(F18)))  &trans
+&trans  &trans           &trans                &trans                &trans                                 &trans  &trans  &trans      &trans  &trans  &trans                       &trans                    &trans                    &trans                    &trans               &trans
             >;
         };
 
-        UBUNTU_APPS_2 {
+        layer_win_apps_2 {
             bindings = <
-&trans  &trans              &trans               &trans               &trans               &trans  &none                                       &trans  &trans                  &trans                   &trans                   &trans                   &trans  &trans
-&trans  &kp LA(LC(LG(F1)))  &kp LC(LA(LG(F2)))   &kp LA(LC(LG(F3)))   &kp LA(LC(LG(F4)))   &trans  &trans                                      &trans  &kp LS(LA(LC(LG(F1))))  &kp LS(LA(LC(LG(F2))))   &kp LS(LA(LC(LG(F3))))   &kp LS(LA(LC(LG(F4))))   &trans  &trans
-&trans  &kp LC(LA(LG(F5)))  &kp LC(LA(LG(F6)))   &kp LC(LA(LG(F7)))   &kp LC(LA(LG(F8)))   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LA(LC(LG(F5))))  &kp LS(LA(LC(LG(F6))))   &kp LS(LA(LC(LG(F7))))   &kp LS(LA(LC(LG(F8))))   &trans  &trans
-&trans  &kp LC(LA(LG(F9)))  &kp LC(LA(LG(F10)))  &kp LC(LA(LG(F11)))  &kp LC(LA(LG(F12)))  &trans                  &trans      &trans                  &kp LS(LA(LC(LG(F9))))  &kp LS(LA(LC(LG(F10))))  &kp LS(LA(LC(LG(F11))))  &kp LS(LA(LC(LG(F12))))  &trans  &trans
-&trans  &trans              &trans               &trans               &trans                       &trans  &trans  &trans      &trans  &trans  &trans                          &trans                   &trans                   &trans                   &trans  &trans
+&trans  &trans          &trans           &trans           &trans           &trans  &none                                       &trans  &trans              &trans               &trans               &trans               &trans  &trans
+&trans  &kp LA(LC(F1))  &kp LC(LA(F2))   &kp LA(LC(F3))   &kp LA(LC(F4))   &trans  &trans                                      &trans  &kp LS(LA(LC(F1)))  &kp LS(LA(LC(F2)))   &kp LS(LA(LC(F3)))   &kp LS(LA(LC(F4)))   &trans  &trans
+&trans  &kp LC(LA(F5))  &kp LC(LA(F6))   &kp LC(LA(F7))   &kp LC(LA(F8))   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LA(LC(F5)))  &kp LS(LA(LC(F6)))   &kp LS(LA(LC(F7)))   &kp LS(LA(LC(F8)))   &trans  &trans
+&trans  &kp LC(LA(F9))  &kp LC(LA(F10))  &kp LC(LA(F11))  &kp LC(LA(F12))  &trans                  &trans      &trans                  &kp LS(LA(LC(F9)))  &kp LS(LA(LC(F10)))  &kp LS(LA(LC(F11)))  &kp LS(LA(LC(F12)))  &trans  &trans
+&trans  &trans          &trans           &trans           &trans                   &trans  &trans  &trans      &trans  &trans  &trans                      &trans               &trans               &trans               &trans  &trans
             >;
         };
 
